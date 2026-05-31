@@ -1,28 +1,26 @@
 [package]
-name = "media"
-version = "0.1.0"
-edition.workspace = true
-publish = false
+name = "media-gpui-standalone"
+version = "1.4.4"
 license = "Apache-2.0"
 description = "Bindings to macos media handling APIs for Zed"
-
-[lints]
-workspace = true
+edition = "2024"
+repository = "https://github.com/zed-industries/zed"
 
 [lib]
 path = "src/media.rs"
 doctest = false
+name = "media"
 
 [dependencies]
-anyhow.workspace = true
-
-[target.'cfg(target_os = "macos")'.dependencies]
-core-foundation.workspace = true
-ctor.workspace = true
-foreign-types = "0.5"
-metal.workspace = true
-core-video.workspace = true
-objc.workspace = true
+anyhow = "^1.0.86"
 
 [build-dependencies]
-bindgen = "0.71"
+bindgen = "^0.71"
+
+[target."cfg(target_os = \"macos\")".dependencies]
+core-foundation = "=0.10.0"
+core-video = {version = "^0.5.2", features = ["metal"]}
+ctor = "^0.4.0"
+foreign-types = "^0.5"
+metal = "^0.33"
+objc = "^0.2"
