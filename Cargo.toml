@@ -1,6 +1,6 @@
 [package]
 name = "media-gpui-standalone"
-version = "1.4.4"
+version = "1.5.3"
 license = "Apache-2.0"
 description = "Bindings to macos media handling APIs for Zed"
 edition = "2024"
@@ -20,7 +20,7 @@ bindgen = "^0.71"
 [target."cfg(target_os = \"macos\")".dependencies]
 core-foundation = "=0.10.0"
 core-video = {version = "^0.5.2", features = ["metal"]}
-ctor = "^0.4.0"
+ctor = "^1.0.6"
 foreign-types = "^0.5"
 metal = "^0.33"
 objc = "^0.2"
