@@ -1,6 +1,6 @@
 [package]
 name = "media-gpui-standalone"
-version = "1.10.3"
+version = "1.11.3"
 license = "Apache-2.0"
 description = "Bindings to macos media handling APIs for Zed"
 edition = "2024"
